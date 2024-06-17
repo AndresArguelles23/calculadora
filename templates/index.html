@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100 dark:bg-gray-900 bg-cover" style="background-image: url('/static/img/fon1.jpg');">
+    <div class="calculator bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md text-center transition duration-500">
+        <h1 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">Calculadora</h1>
+        <input type="number" id="num1" placeholder="Número 1" class="mb-4 p-2 border border-gray-300 dark:border-gray-600 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-500">
+        <input type="number" id="num2" placeholder="Número 2" class="mb-4 p-2 border border-gray-300 dark:border-gray-600 rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-500">
+        <div class="buttons mb-4">
+            <button onclick="calculate('suma')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-2 transition duration-300 ease-in-out">Suma</button>
+            <button onclick="calculate('resta')" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mx-2 transition duration-300 ease-in-out">Resta</button>
+            <button onclick="calculate('multiplicacion')" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mx-2 transition duration-300 ease-in-out">Multiplicación</button>
+            <button onclick="calculate('division')" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-2 transition duration-300 ease-in-out">División</button>
+        </div>
+        <h2 class="text-xl text-gray-900 dark:text-gray-100">Resultado: <span id="result" class="font-bold"></span></h2>
+        <h2 class="text-xl text-red-500">Mensaje: <span id="message" class="font-bold"></span></h2>
+        <h2 class="text-xl mt-6 text-gray-900 dark:text-gray-100">Historial:</h2>
+        <ul id="history" class="list-disc list-inside text-left mt-4 bg-gray-50 dark:bg-gray-700 p-4 rounded shadow-inner transition duration-500"></ul>
+        <button onclick="toggleDarkMode()" class="mt-4 bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out">Modo Oscuro</button>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
